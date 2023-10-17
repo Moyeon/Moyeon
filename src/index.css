@@ -1,13 +1,61 @@
+@import url("https://use.typekit.net/gez6hqs.css");
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard-dynamic-subset.css');
+:root {
+  --BLACK: #171718;
+  --WHITE: #FFFFFF;
+  --GREY: #A7A7B4;
+  --YELLOW: #FFB800;
+  --DARKBLUE: #1C3488;
+  --CREAM: #FFF1DD;
+}
+
 body {
-  margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: var(--CREAM);
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  box-sizing: border-box;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+a{
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.TopBarBtn{
+  position: relative;
+  padding: 2em 1em 1em 1em;
+  transition: all ease 0.2s;
+}
+
+.TopBarBtn:hover{
+  background: linear-gradient(var(--DARKBLUE), var(--DARKBLUE));
+}
+.TopBarBtn:hover div{
+  color: var(--WHITE);
+}
+
+.TopBarMain{
+  padding-top: 1em;
+}
+
+.linkBox{
+  width: 100%;
+  height: 100%;
+}
+
+.wrap{
+  width: 100%;
+  height: 100vh;
+  position: relative;
 }

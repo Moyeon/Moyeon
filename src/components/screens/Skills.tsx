@@ -30,21 +30,14 @@ const FlexBox = styled.div`
   margin: 2em 0;
   position: relative;
 `;
-const Line = styled.span`
-  height: 80%;
-  border-right: 2px solid var(--WHITE);
-  width: 0;
-  margin: 0 1em; 
-`;
 
 export default function Skills() {
   return (
-    <OneScreen style={{backgroundColor: "var(--DARKBLUE)"}}>
+    <OneScreen id="SKILLS" style={{backgroundColor: "var(--DARKBLUE)"}}>
       <Stick color={Colors.DARKBLUE}></Stick>
       <Box>
         <MyText fontType={FontType.BLACK} color={Colors.WHITE} fontSize={32}>
-          SKILLS
-          <Line></Line>
+          SKILLS |
           <MyText fontType={FontType.SEMIBOLD} color={Colors.WHITE} fontSize={20}>
             CLICK TO VIEW DETAILS
           </MyText>
@@ -66,7 +59,7 @@ export default function Skills() {
             스칼라를 사용한 프로그래밍 언어 작성 경험이 있습니다.
           </SkillBox>
           <SkillBox bgColor={Colors.DARKBLUE} fontSize={30} rowSize={7} title="RPG Maker" subtitle="GAME">
-            중학교 때 가족이 소개해줬으며, 이걸 통해 해리포터 게임을 함께 만들어 보자고 제안했습니다. 완성은 하지 못했지만 여러 버튼을 눌러보며 스스로 게임 개발 방법을 배웠고, 간단한 이벤트 기반 쯔꾸르 앱을 만들 수 있었습니다.<br/><br/>코딩에 익숙해지고 나서 다시 사용했을 때는 코딩을 통한 더 세세한 조정법을 배워 학생과 함께 게임을 만들어 보기도 했습니다.
+            중학교 때 가족이 rpg maker 툴을 알려주며, 이걸 통해 해리포터 게임을 함께 만들자고 제안했습니다. 완성은 하지 못했지만 여러 버튼을 눌러보며 스스로 게임 개발 방법을 배웠고, 간단한 이벤트 기반 쯔꾸르 앱을 만들 수 있었습니다.<br/><br/>코딩에 익숙해지고 나서 다시 사용했을 때는 텍스트 코딩을 통한 더 세세한 조정법을 배워 학생과 함께 게임을 만들어 보기도 했습니다.
           </SkillBox>
           <SkillBox bgColor={Colors.BLACK} fontSize={30} rowSize={7} title="Unity" subtitle="GAME">
             고등학교 1학년 때 화학 수행평가를 위해 AR 앱과 VR 앱을 만든 경험이 있습니다. 이후 유니티에 흥미를 가져 PC 게임 프로젝트를 홀로 여러 번 진행했으며, 이를 토대로 학생에게 수업을 진행할 수 있을 정도로 친숙합니다.

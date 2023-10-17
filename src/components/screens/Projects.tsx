@@ -23,11 +23,11 @@ const Box = styled.div`
 
 export default function Projects() {
   return (
-    <OneScreen style={{backgroundColor: "var(--DARKBLUE)"}}>
+    <OneScreen id="PROJECTS" style={{backgroundColor: "var(--DARKBLUE)"}}>
       <Stick color={Colors.DARKBLUE}></Stick>
       <Box>
         <MyText fontType={FontType.BLACK} color={Colors.WHITE} fontSize={32}>
-          PROJECTS
+          PROJECTS |
         </MyText>
         <MyText fontType={FontType.SEMIBOLD} color={Colors.WHITE} fontSize={20} isPretendard={1}>
           Personal Quiz Website : https://id311.vercel.app/ 3인 프로젝트, React, Next.js 기반

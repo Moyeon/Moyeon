@@ -35,11 +35,11 @@ const Flex = styled.div`
 
 export default function About() {
   return (
-    <OneScreen style={{backgroundColor: "var(--YELLOW)"}}>
+    <OneScreen id="ABOUT" style={{backgroundColor: "var(--YELLOW)"}}>
       <Stick color={Colors.YELLOW}></Stick>
       <Box>
         <MyText fontType={FontType.BLACK} color={Colors.BLACK} fontSize={32}>
-          ABOUT
+          ABOUT |
         </MyText>
         <Flex>
           <Tab>

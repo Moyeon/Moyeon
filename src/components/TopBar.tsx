@@ -3,6 +3,7 @@ import MyText, {FontType} from "./styles/MyText";
 import { Colors } from "./styles/Colors";
 import React from "react";
 import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 
 const FlexDivPC = styled.div`
   display: flex;
@@ -37,26 +38,26 @@ export default function TopBar(){
           </MyText>
         </Link>
         <Empty></Empty>
-        <Link to="/" className="TopBarBtn">
+        <HashLink smooth to="/#ABOUT" className="TopBarBtn">
           <MyText fontType={FontType.SEMIBOLD} color={Colors.BLACK} fontSize={20}>
             ABOUT
           </MyText>
-        </Link>
-        <Link to="/" className="TopBarBtn">
+        </HashLink>
+        <HashLink smooth to="/#SKILLS" className="TopBarBtn">
           <MyText fontType={FontType.SEMIBOLD} color={Colors.BLACK} fontSize={20}>
             SKILLS
           </MyText>
-        </Link>
-        <Link to="/" className="TopBarBtn">
+        </HashLink>
+        <HashLink smooth to="/#KIDS" className="TopBarBtn">
           <MyText fontType={FontType.SEMIBOLD} color={Colors.BLACK} fontSize={20}>
-            KIDS'
+            KIDS
           </MyText>
-        </Link>
-        <Link to="/" className="TopBarBtn">
+        </HashLink>
+        <HashLink smooth to="/#PROJECTS" className="TopBarBtn">
           <MyText fontType={FontType.SEMIBOLD} color={Colors.BLACK} fontSize={20}>
             PROJECTS
           </MyText>
-        </Link>
+        </HashLink>
         {/* <Link to="/" className="TopBarBtn">
           <MyText fontType={FontType.SEMIBOLD} color={Colors.BLACK} fontSize={20}>
             DESIGNS

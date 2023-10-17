@@ -37,6 +37,12 @@ const GridItem = styled.div<{rowSize: number}>`
   grid-row: auto / span ${props => props.rowSize};
 `;
 
+const VerticalCenter = styled.div`
+  height: 100%;
+  display: flex;
+  align-items: center;
+`;
+
 interface Props {
   bgColor?: string;
   fontSize: number;
@@ -79,9 +85,12 @@ const SkillBox = ({bgColor = Colors.WHITE, fontSize, children, title, rowSize = 
           {title}
         </MyText></>}
       {clicked &&
-        <MyText fontSize={16} fontType={FontType.REGULAR} color={getTextColor(bgColor)} isPretendard={1}>
-          {children}
-        </MyText>}
+        <VerticalCenter>
+          <MyText fontSize={16} fontType={FontType.REGULAR} color={getTextColor(bgColor)} isPretendard={1}>
+            {children}
+          </MyText>
+        </VerticalCenter>
+        }
     </Wrapper>
   </GridItem>);
 }

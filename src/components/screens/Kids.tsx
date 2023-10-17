@@ -38,11 +38,11 @@ const Br = styled.div`
 
 export default function Kids() {
   return (
-    <OneScreen style={{backgroundColor: "var(--CREAM)"}}>
+    <OneScreen id="KIDS" style={{backgroundColor: "var(--CREAM)"}}>
       <Stick color={Colors.CREAM}></Stick>
       <Box>
         <MyText fontType={FontType.BLACK} color={Colors.BLACK} fontSize={32}>
-          KIDS
+          KIDS |
         </MyText>
         <Br></Br>
         <MyText fontType={FontType.REGULAR} color={Colors.BLACK} fontSize={18} isPretendard={1}>

@@ -105,3 +105,11 @@ a{
   border-radius: 0;
   transform: translateY(-50%);
 }
+
+.projBox{
+  margin-bottom: 3em;
+}
+
+/* .projBox:nth-child(2n){
+  margin-right: 2em;
+} */

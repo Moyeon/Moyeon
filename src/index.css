@@ -59,3 +59,49 @@ a{
   height: 100vh;
   position: relative;
 }
+
+.projText > div{
+  margin-bottom: 0.6em;
+}
+
+.gitHub, .figma, .linkLogo, .link{
+  background-image: url(./github-mark-white.svg);
+  width: 1.6em;
+  height: 1.6em;
+  background-size: cover;
+  display: inline-block;
+  margin: 0.4em;
+  border-radius: 50%;
+}
+
+.link{
+  background-image: url(./link.svg);
+}
+
+.figma{
+  background-image: url(./figma-icon.svg);
+}
+
+.linkLogo{
+  background-image: url(./GitHub_Logo_White.png);
+  width: 3em;
+  background-size: contain;
+  background-position: center;
+  margin-left: 0;
+  border-radius: 0;
+  background-repeat: no-repeat;
+}
+.fig{
+  background-image: url(./Figma.svg);
+}
+.linkText{
+  color: var(--WHITE);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3em;
+  height: 1.6em;
+  margin-left: 0;
+  border-radius: 0;
+  transform: translateY(-50%);
+}

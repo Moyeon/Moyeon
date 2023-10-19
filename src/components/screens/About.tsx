@@ -15,6 +15,7 @@ const Box = styled.div`
   margin: 0 auto;
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   @media screen and (max-width: 1240px) {
     padding: 0 20px;
     box-sizing: border-box;
@@ -31,6 +32,9 @@ const Flex = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 2em;
+  @media screen and (max-width: 864px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 const Br = styled.div`
@@ -54,13 +58,13 @@ export default function About() {
             <MyText fontType={FontType.BOLD} color={Colors.BLACK} fontSize={20} isPretendard={1}>
               이호연
             </MyText>
-            <MyText fontType={FontType.LIGHT} color={Colors.BLACK} fontSize={20} isPretendard={1}>
-              개발자이자 디자이너
+            <MyText fontType={FontType.LIGHT} color={Colors.BLACK} fontSize={18} isPretendard={1}>
+              개발자, 그리고 UI/UX 디자이너
             </MyText>
-            <MyText fontType={FontType.LIGHT} color={Colors.BLACK} fontSize={20} isPretendard={1}>
+            <MyText fontType={FontType.LIGHT} color={Colors.BLACK} fontSize={18} isPretendard={1}>
               카이스트 전산학부 전공
             </MyText>
-            <MyText fontType={FontType.LIGHT} color={Colors.BLACK} fontSize={20} isPretendard={1}>
+            <MyText fontType={FontType.LIGHT} color={Colors.BLACK} fontSize={18} isPretendard={1}>
               카이스트 산업디자인과 복수전공
             </MyText>
           </Tab>
@@ -87,11 +91,12 @@ export default function About() {
 
           <Tab>
             <MyText fontType={FontType.BLACK} color={Colors.WHITE} fontSize={20}>
-              INTEREST
+              CONTACT
             </MyText>
             <Br/>
             <MyText fontType={FontType.LIGHT} color={Colors.BLACK} fontSize={20} isPretendard={1}>
-              내가 디자인하고, 내가 만드는 게임.
+              dbqld770@kaist.ac.kr
+              dbqld770@gmail.com
             </MyText>
           </Tab>
         </Flex>

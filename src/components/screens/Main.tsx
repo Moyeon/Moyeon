@@ -17,6 +17,16 @@ const OneScreen = styled.div`
   flex-direction: column;
 `;
 
+const OneScreen2 = styled.div`
+  width: 100vw;
+  height: 5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  // background-color: var(--YELLOW);
+`;
+
 export default function Main() {
   return (
     <>
@@ -36,7 +46,11 @@ export default function Main() {
       <Skills></Skills>
       <Kids></Kids>
       <Projects></Projects>
-      {/* <Designs></Designs> */}
+      <OneScreen2>
+        <MyText fontType={FontType.BLACK} color={Colors.BLACK} fontSize={20}>
+          Copyright©2023 Hoyeon All rights reserved.
+        </MyText>
+      </OneScreen2>
     </>
   );
 }

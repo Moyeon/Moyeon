@@ -5,8 +5,8 @@ import '../../index.css';
 import { Colors } from "../styles/Colors";
 import MyText, { FontType } from "../styles/MyText";
 
-const Wrapper = styled.div<{bgColor: string, filter: string}>`
-  background-color: ${props => props.bgColor};
+const Wrapper = styled.div<{bgcolor: string, filter: string}>`
+  background-color: ${props => props.bgcolor};
   cursor: pointer;
   filter: brightness(${props => props.filter});
   width: 100%;
@@ -31,11 +31,11 @@ const Wrapper = styled.div<{bgColor: string, filter: string}>`
   }
 `;
 
-const GridItem = styled.div<{rowSize: number, styleText: string}>`
+const GridItem = styled.div<{rowsize: number, styletext: string}>`
   width: 100%;
   height: 100%;
-  grid-row: auto / span ${props => props.rowSize};
-  ${props => props.styleText};
+  grid-row: auto / span ${props => props.rowsize};
+  ${props => props.styletext};
 `;
 
 const VerticalCenter = styled.div`
@@ -45,16 +45,16 @@ const VerticalCenter = styled.div`
 `;
 
 interface Props {
-  bgColor?: string;
+  bgcolor?: string;
   fontSize: number;
   children: ReactNode;
   title: string;
-  rowSize?: number
+  rowsize?: number
   subtitle: string;
-  styleText?: string;
+  styletext?: string;
 }
 
-const SkillBox = ({bgColor = Colors.WHITE, fontSize, children, title, rowSize = 4, subtitle, styleText = ""}: Props) => {
+const SkillBox = ({bgcolor = Colors.WHITE, fontSize, children, title, rowsize = 4, subtitle, styletext = ""}: Props) => {
   const [clicked, setClicked] = useState(false);
   const getFilter = (isClicked: boolean) => {
     if(!isClicked){
@@ -63,8 +63,8 @@ const SkillBox = ({bgColor = Colors.WHITE, fontSize, children, title, rowSize = 
       return "100%";
     }
   }
-  const getTextColor = (bgColor: string) => {
-    switch (bgColor){
+  const getTextColor = (bgcolor: string) => {
+    switch (bgcolor){
       case Colors.BLACK:
         return Colors.WHITE;
       case Colors.DARKBLUE:
@@ -77,18 +77,18 @@ const SkillBox = ({bgColor = Colors.WHITE, fontSize, children, title, rowSize = 
   }
 
   return (
-  <GridItem onClick={() => setClicked(!clicked)} rowSize={rowSize} styleText={styleText}>
-    <Wrapper bgColor={bgColor} filter={getFilter(clicked)}>
+  <GridItem onClick={() => setClicked(!clicked)} rowsize={rowsize} styletext={styletext}>
+    <Wrapper bgcolor={bgcolor} filter={getFilter(clicked)}>
       {!clicked &&<>
-        <MyText fontSize={14} fontType={FontType.BLACK} color={getTextColor(bgColor)}>
+        <MyText fontSize={14} fontType={FontType.BLACK} color={getTextColor(bgcolor)}>
         {subtitle}
         </MyText>
-        <MyText fontSize={fontSize} fontType={FontType.BOLD} color={getTextColor(bgColor)} isPretendard={1}>
+        <MyText fontSize={fontSize} fontType={FontType.BOLD} color={getTextColor(bgcolor)} isPretendard={1}>
           {title}
         </MyText></>}
       {clicked &&
         <VerticalCenter>
-          <MyText fontSize={16} fontType={FontType.REGULAR} color={getTextColor(bgColor)} isPretendard={1}>
+          <MyText fontSize={16} fontType={FontType.REGULAR} color={getTextColor(bgcolor)} isPretendard={1}>
             {children}
           </MyText>
         </VerticalCenter>

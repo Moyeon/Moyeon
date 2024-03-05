@@ -5,7 +5,7 @@ import '../../index.css';
 import { Colors } from "../styles/Colors";
 import MyText, { FontType } from "../styles/MyText";
 
-const Wrapper = styled.div<{bgColor: string}>`
+const Wrapper = styled.div<{bgcolor: string}>`
   cursor: pointer;
   width: 100%;
   height: 100%;
@@ -14,7 +14,7 @@ const Wrapper = styled.div<{bgColor: string}>`
   justify-content: flex-start;
   align-items: flex-start;
   box-sizing: border-box;
-  background-color: ${props => props.bgColor};
+  background-color: ${props => props.bgcolor};
 `;
 
 const GridItem = styled.div`
@@ -27,16 +27,16 @@ const Br = styled.div`
 `;
 
 interface Props {
-  bgColor?: string;
+  bgcolor?: string;
   children: ReactNode;
   title: string;
   subtitle: string;
   link: string;
 }
 
-const LinkBox = ({bgColor = Colors.WHITE, children, title, subtitle, link}: Props) => {
-  const getTextColor = (bgColor: string) => {
-    switch (bgColor){
+const LinkBox = ({bgcolor = Colors.WHITE, children, title, subtitle, link}: Props) => {
+  const getTextColor = (bgcolor: string) => {
+    switch (bgcolor){
       case Colors.BLACK:
         return Colors.WHITE;
       case Colors.DARKBLUE:
@@ -51,15 +51,15 @@ const LinkBox = ({bgColor = Colors.WHITE, children, title, subtitle, link}: Prop
   return (
   <a className="linkBox" href={link}>
     <GridItem>
-      <Wrapper bgColor={bgColor}>
-        <MyText fontSize={20} fontType={FontType.BLACK} color={getTextColor(bgColor)}>
+      <Wrapper bgcolor={bgcolor}>
+        <MyText fontSize={20} fontType={FontType.BLACK} color={getTextColor(bgcolor)}>
           {title}
         </MyText>
         <MyText fontSize={14} fontType={FontType.BOLD} color={Colors.BLACK} isPretendard={1}>
           {subtitle}
         </MyText>
         <Br></Br>
-        <MyText fontSize={16} fontType={FontType.REGULAR} color={getTextColor(bgColor)} isPretendard={1}>
+        <MyText fontSize={16} fontType={FontType.REGULAR} color={getTextColor(bgcolor)} isPretendard={1}>
           {children}
         </MyText>
       </Wrapper>

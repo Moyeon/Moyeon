@@ -65,7 +65,7 @@ export default function Kids() {
           <LinkBox title="WHACK A MOLE" subtitle="2021.12" link="https://moyeon.github.io/CodingCourses/Dylan/2021/1225WhackaMole.html">
             Whack a Mole with Dylan.<br/>CSS 애니메이션을 활용한 두더지 잡기 게임.
           </LinkBox>
-          <LinkBox bgColor={Colors.YELLOW} title="TYPING GAME" subtitle="2022." link="https://moyeon.github.io/CodingCourses/Kwonsang/2022/0108keyGame.html">
+          <LinkBox bgcolor={Colors.YELLOW} title="TYPING GAME" subtitle="2022." link="https://moyeon.github.io/CodingCourses/Kwonsang/2022/0108keyGame.html">
             Typing Practice Game with Kwonsang.<br/>빠르고 정확하게 타자를 쳐 떨어지는 단어를 없애자.
           </LinkBox>
           <LinkBox title="CPS TEST" subtitle="2022.02" link="https://moyeon.github.io/CodingCourses/Dylan/2022/cpstest/">
@@ -77,7 +77,7 @@ export default function Kids() {
           <LinkBox title="GAME OF LIFE" subtitle="2022.03" link="https://moyeon.github.io/CodingCourses/Kwonsang/2022/0326LifeGame.html">
             Game of Life with Kwonsang.<br/>콘웨이의 생명 게임 시뮬레이터. +, - 키를 눌러 그리드의 크기를 바꾸고 space 키를 눌러 시작할 수 있다.
           </LinkBox>
-          <LinkBox bgColor={Colors.DARKBLUE} title="WORDLE" subtitle="2022.05" link="https://moyeon.github.io/CodingCourses/Dylan/2022/wordle/">
+          <LinkBox bgcolor={Colors.DARKBLUE} title="WORDLE" subtitle="2022.05" link="https://moyeon.github.io/CodingCourses/Dylan/2022/wordle/">
             Wordle with Dylan.<br/>기존 Wordle의 디자인을 차용해 바닐라 js로 재구성한 워들 게임.
           </LinkBox>
           <LinkBox title="RANDOM FONT" subtitle="2022.05" link="https://moyeon.github.io/CodingCourses/Kwonsang/2022/randomFont/">
@@ -104,7 +104,7 @@ export default function Kids() {
           <LinkBox title="2048" subtitle="2023.04" link="https://moyeon.github.io/CodingCourses/Kwonsang/2023/Game2048/">
             2048 Game with Kwonsang.<br/>2048 게임을 순수 자바스크립트로 재구성함.
           </LinkBox>
-          <LinkBox bgColor={Colors.RED} title="RUNNER" subtitle="2023.07" link="https://moyeon.github.io/CodingCourses/Kwonsang/2023/runrun/">
+          <LinkBox bgcolor={Colors.RED} title="RUNNER" subtitle="2023.07" link="https://moyeon.github.io/CodingCourses/Kwonsang/2023/runrun/">
             Runner Game with Kwonsang.<br/>반응형을 배운 후 제작되어 모바일 환경에서 플레이가 가능함. 모바일 환경에서는 90도 회전되어 화면 크기를 최대로 활용함.
           </LinkBox>
         </GridBox>

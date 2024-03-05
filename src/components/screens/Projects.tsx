@@ -16,9 +16,10 @@ const Box = styled.div`
   margin: 0 auto;
   display: flex;
   flex-direction: column;
+  padding: 0 4em;
+  box-sizing: border-box;
   @media screen and (max-width: 1240px) {
-    padding: 0 20px;
-    box-sizing: border-box;
+    
   }
 `;
 
@@ -31,7 +32,7 @@ const A = styled.a`
 `;
 
 const Br = styled.div`
-  height: 0.6em;
+  height: 2em;
 `;
 
 export default function Projects() {
@@ -43,20 +44,6 @@ export default function Projects() {
           PROJECTS |
         </MyText>
         <Br></Br>
-        <ProjBox title="ODokWan" subtitle="2023.03 ~ 2023.04">
-          <MyText fontType={FontType.LIGHT} color={Colors.WHITE} fontSize={18} isPretendard={1}>
-            - 독서 시간을 기록하고 그에 따른 이미지와 통계를 생성하는 앱
-          </MyText>
-          <MyText fontType={FontType.LIGHT} color={Colors.WHITE} fontSize={18} isPretendard={1}>
-            - 5인 프로젝트, 의뢰자 입장에서 프로젝트 작성
-          </MyText>
-          <MyText fontType={FontType.LIGHT} color={Colors.WHITE} fontSize={18} isPretendard={1}>
-            - 앱의 UI 담당
-          </MyText>
-          <MyText fontType={FontType.SEMIBOLD} color={Colors.WHITE} fontSize={18}>
-            <A href="https://www.figma.com/proto/Vq8miFw1Ja067gnJLBjhnz/cs350-odokwan?page-id=0%3A1&type=design&node-id=1-2&viewport=46%2C201%2C0.07&t=Hqj1ilU1gKjQagXu-1&scaling=contain&mode=design"><GitHub className="figma"></GitHub><div className="linkLogo fig"/></A>
-          </MyText>
-        </ProjBox>
         <ProjBox title="Personal Quiz" subtitle="2022.05 ~ 2022.06">
           <MyText fontType={FontType.LIGHT} color={Colors.WHITE} fontSize={18} isPretendard={1}>
             - Personal Quiz를 생성하고, 코드를 공유해 다른 사람의 퀴즈를 풀 수 있는 웹
@@ -70,6 +57,20 @@ export default function Projects() {
           <MyText fontType={FontType.SEMIBOLD} color={Colors.WHITE} fontSize={18}>
             <A href="https://github.com/yumin-jung/ID311-Final-Project"><GitHub className="gitHub"></GitHub><div className="linkLogo"/></A>
             <A href="https://id311.vercel.app/"><GitHub className="link"></GitHub><div className="linkText">VISIT</div></A>
+          </MyText>
+        </ProjBox>
+        <ProjBox title="ODokWan" subtitle="2023.03 ~ 2023.04">
+          <MyText fontType={FontType.LIGHT} color={Colors.WHITE} fontSize={18} isPretendard={1}>
+            - 독서 시간을 기록하고 그에 따른 이미지와 통계를 생성하는 앱
+          </MyText>
+          <MyText fontType={FontType.LIGHT} color={Colors.WHITE} fontSize={18} isPretendard={1}>
+            - 5인 프로젝트, 의뢰자 입장에서 프로젝트 작성
+          </MyText>
+          <MyText fontType={FontType.LIGHT} color={Colors.WHITE} fontSize={18} isPretendard={1}>
+            - 앱의 UI 담당
+          </MyText>
+          <MyText fontType={FontType.SEMIBOLD} color={Colors.WHITE} fontSize={18}>
+            <A href="https://www.figma.com/proto/Vq8miFw1Ja067gnJLBjhnz/cs350-odokwan?page-id=0%3A1&type=design&node-id=1-2&viewport=46%2C201%2C0.07&t=Hqj1ilU1gKjQagXu-1&scaling=contain&mode=design"><GitHub className="figma"></GitHub><div className="linkLogo fig"/></A>
           </MyText>
         </ProjBox>
         <ProjBox title="CSN" subtitle="2023.03 ~ 2023.06">

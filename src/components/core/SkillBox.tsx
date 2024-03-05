@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { CSSProperties, useState } from "react";
 import styled from "styled-components";
 import { ReactNode } from "react";
 import '../../index.css';
@@ -31,10 +31,11 @@ const Wrapper = styled.div<{bgColor: string, filter: string}>`
   }
 `;
 
-const GridItem = styled.div<{rowSize: number}>`
+const GridItem = styled.div<{rowSize: number, styleText: string}>`
   width: 100%;
   height: 100%;
   grid-row: auto / span ${props => props.rowSize};
+  ${props => props.styleText};
 `;
 
 const VerticalCenter = styled.div`
@@ -50,9 +51,10 @@ interface Props {
   title: string;
   rowSize?: number
   subtitle: string;
+  styleText?: string;
 }
 
-const SkillBox = ({bgColor = Colors.WHITE, fontSize, children, title, rowSize = 5, subtitle}: Props) => {
+const SkillBox = ({bgColor = Colors.WHITE, fontSize, children, title, rowSize = 4, subtitle, styleText = ""}: Props) => {
   const [clicked, setClicked] = useState(false);
   const getFilter = (isClicked: boolean) => {
     if(!isClicked){
@@ -75,7 +77,7 @@ const SkillBox = ({bgColor = Colors.WHITE, fontSize, children, title, rowSize = 
   }
 
   return (
-  <GridItem onClick={() => setClicked(!clicked)} rowSize={rowSize}>
+  <GridItem onClick={() => setClicked(!clicked)} rowSize={rowSize} styleText={styleText}>
     <Wrapper bgColor={bgColor} filter={getFilter(clicked)}>
       {!clicked &&<>
         <MyText fontSize={14} fontType={FontType.BLACK} color={getTextColor(bgColor)}>

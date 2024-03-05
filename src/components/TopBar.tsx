@@ -30,7 +30,7 @@ export default function TopBar(){
       backgroundColor: "transparent",
       zIndex: 10,
       height: "75px",
-      }}>
+      }} className="topbar">
       <FlexDivPC>
         <Link to="/" className="TopBarMain">
           <MyText fontType={FontType.BLACK} color={Colors.BLACK} fontSize={36}>

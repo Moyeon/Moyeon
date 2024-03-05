@@ -17,9 +17,10 @@ const Box = styled.div`
   display: flex;
   flex-direction: column;
   position: relative;
+  padding: 0 4em;
+  box-sizing: border-box;
   @media screen and (max-width: 1240px) {
-    padding: 0 20px;
-    box-sizing: border-box;
+    
   }
 `;
 
@@ -46,7 +47,7 @@ export default function Kids() {
         </MyText>
         <Br></Br>
         <MyText fontType={FontType.REGULAR} color={Colors.BLACK} fontSize={18} isPretendard={1}>
-          학생들을 가르칠 때 가장 중요한 것은 흥미를 끌고 충족시키며 학습에 대해 긍정적인 인상을 남기는 것입니다. 이를 위해 기본적인 이론 학습과 그를 활용한 인터랙션을 병행하였으며, 아래는 학생들과 함께 만든 웹 프로젝트들입니다. 학생의 아이디어를 학생들이 이해하기 쉬운 방법으로 구현하기 위해 순수 자바스크립트만 사용되었습니다.
+          어린 학생들을 가르칠 때 가장 중요한 것은 흥미를 끌고 충족시키며 학습에 대해 긍정적인 인상을 남기는 것입니다. 이를 위해 기본적인 이론 학습과 그를 활용한 실습 수업을 병행하였으며, 아래는 학생들과 함께 만든 웹 프로젝트들입니다. 학생들이 이해하기 쉬운 방법으로 구현하기 위해 Vanilla JS로 구성되어 있습니다.
         </MyText>
         <GridBox>
           <LinkBox title="PIXEL ART" subtitle="2021.05" link="https://moyeon.github.io/CodingCourses/Dylan/2021/0522pixelart.html">
@@ -97,13 +98,13 @@ export default function Kids() {
           <LinkBox title="SNAKE GAME" subtitle="2023.01" link="https://moyeon.github.io/CodingCourses/Kwonsang/2023/snake%20game/">
             Snake Game with Kwonsang.<br/>추억의 게임을 게임기 디자인과 함께 구현. 로컬 저장소를 사용해 재화가 저장된다.
           </LinkBox>
-          <LinkBox title="CELL GAME" subtitle="2022.03" link="https://moyeon.github.io/CodingCourses/Kwonsang/2023/Agario/">
+          <LinkBox title="CELL GAME" subtitle="2023.03" link="https://moyeon.github.io/CodingCourses/Kwonsang/2023/Agario/">
             CELL GAME with Kwonsang.<br/>Agar.io에서 영감을 얻어 제작한 2인용 세포 게임. WASD와 방향키를 사용해 두 플레이어가 동시에 조작할 수 있음.
           </LinkBox>
-          <LinkBox title="2048" subtitle="2022.04" link="https://moyeon.github.io/CodingCourses/Kwonsang/2023/Game2048/">
+          <LinkBox title="2048" subtitle="2023.04" link="https://moyeon.github.io/CodingCourses/Kwonsang/2023/Game2048/">
             2048 Game with Kwonsang.<br/>2048 게임을 순수 자바스크립트로 재구성함.
           </LinkBox>
-          <LinkBox bgColor={Colors.RED} title="RUNNER" subtitle="2022.07" link="https://moyeon.github.io/CodingCourses/Kwonsang/2023/runrun/">
+          <LinkBox bgColor={Colors.RED} title="RUNNER" subtitle="2023.07" link="https://moyeon.github.io/CodingCourses/Kwonsang/2023/runrun/">
             Runner Game with Kwonsang.<br/>반응형을 배운 후 제작되어 모바일 환경에서 플레이가 가능함. 모바일 환경에서는 90도 회전되어 화면 크기를 최대로 활용함.
           </LinkBox>
         </GridBox>

@@ -16,9 +16,10 @@ const Box = styled.div`
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  padding: 0 4em;
+  box-sizing: border-box;
   @media screen and (max-width: 1240px) {
-    padding: 0 20px;
-    box-sizing: border-box;
+    
   }
 `;
 
@@ -78,14 +79,14 @@ export default function About() {
               코딩학원 BEYOND CODING 근무
             </MyText>
             <MyText fontType={FontType.REGULAR} color={Colors.BLACK} fontSize={14}>
-              2020.09 ~ 2023.10
+              2020.09 ~ 2024.01
             </MyText>
             <Br/>
             <MyText fontType={FontType.LIGHT} color={Colors.BLACK} fontSize={18} isPretendard={1}>
-              초, 중, 고등학교 학생 대상 교습 :
+              초, 중, 고등학교 학생 대상 강의 :
             </MyText>
             <MyText fontType={FontType.LIGHT} color={Colors.BLACK} fontSize={16} isPretendard={1}>
-              웹디자인, 스크래치, 유니티 게임개발, MakeX Robotics, Python, C++, 올림피아드
+              웹디자인, 스크래치, 유니티 게임개발, MakeX Robotics, Python, C/C++, 올림피아드 대비
             </MyText>
           </Tab>
 

@@ -32,11 +32,11 @@ export default function TopBar(){
       height: "75px",
       }} className="topbar">
       <FlexDivPC>
-        <Link to="/" className="TopBarMain">
+        <HashLink smooth to="/#TOP" className="TopBarMain">
           <MyText fontType={FontType.BLACK} color={Colors.BLACK} fontSize={36}>
             HOYEON
           </MyText>
-        </Link>
+        </HashLink>
         <Empty></Empty>
         <HashLink smooth to="/#ABOUT" className="TopBarBtn">
           <MyText fontType={FontType.SEMIBOLD} color={Colors.BLACK} fontSize={20}>

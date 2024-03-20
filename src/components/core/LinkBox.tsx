@@ -112,7 +112,7 @@ const LinkBox = ({bgcolor = Colors.WHITE, children, title, subtitle, link, githu
           {children}
         </MyText>
         <FlexBox>
-          <A href="https://github.com/yumin-jung/ID311-Final-Project"><Box bgcolor={getTextColor(bgcolor)}>
+          <A href={github}><Box bgcolor={getTextColor(bgcolor)}>
             <MyText fontSize={14} fontType={FontType.BOLD} color={bgcolor} isPretendard={1}>
               GitHub
             </MyText>

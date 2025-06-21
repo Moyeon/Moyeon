@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import MyText, {FontType} from "../styles/MyText";
+import MyText, { FontType } from "../styles/MyText";
 import { Colors } from "../styles/Colors";
 import TopBar from "../TopBar";
 import About from "./About";
@@ -29,30 +29,40 @@ const OneScreen2 = styled.div`
   // background-color: var(--YELLOW);
 `;
 
-const TextShadow = styled.div<{xOffset: number, yOffset: number}>`
+const TextShadow = styled.div<{ xOffset: number; yOffset: number }>`
   font-family: Proxima Nova;
   font-size: 80px;
-  // transform: translate(${props => props.xOffset}px, ${props => props.yOffset}px);
+  // transform: translate(${(props) => props.xOffset}px, ${(props) =>
+    props.yOffset}px);
   font-weight: 900;
   position: absolute;
-  text-shadow: ${props => props.xOffset}px ${props => - props.yOffset}px 0 ${Colors.YELLOW},
-                ${props => - props.xOffset}px ${props => props.yOffset}px 0 ${Colors.RED},
-                ${props => props.yOffset}px ${props => props.xOffset}px 0 ${Colors.DARKBLUE},
-                ${props => - props.yOffset}px ${props => - props.xOffset}px 0 ${Colors.GREY};
+  text-shadow: ${(props) => props.xOffset}px ${(props) => -props.yOffset}px 0
+      ${Colors.YELLOW},
+    ${(props) => -props.xOffset}px ${(props) => props.yOffset}px 0 ${Colors.RED},
+    ${(props) => props.yOffset}px ${(props) => props.xOffset}px 0
+      ${Colors.DARKBLUE},
+    ${(props) => -props.yOffset}px ${(props) => -props.xOffset}px 0
+      ${Colors.GREY};
 `;
 
-const TextShadow2 = styled.div<{xOffset: number, yOffset: number}>`
+const TextShadow2 = styled.div<{ xOffset: number; yOffset: number }>`
   font-family: Proxima Nova;
   font-size: 80px;
-  transform: translate(${props => props.xOffset}px, ${props => props.yOffset}px);
+  transform: translate(
+    ${(props) => props.xOffset}px,
+    ${(props) => props.yOffset}px
+  );
   font-weight: 900;
   position: absolute;
 `;
 
-const TextShadow3 = styled.div<{xOffset: number, yOffset: number}>`
+const TextShadow3 = styled.div<{ xOffset: number; yOffset: number }>`
   font-family: Proxima Nova;
   font-size: 80px;
-  transform: translate(${props => props.xOffset}px, ${props => props.yOffset}px);
+  transform: translate(
+    ${(props) => props.xOffset}px,
+    ${(props) => props.yOffset}px
+  );
   font-weight: 900;
   position: absolute;
 `;
@@ -61,23 +71,26 @@ export default function Main() {
   const [xOffset, setXoffset] = useState(0);
   const [yOffset, setYoffset] = useState(0);
 
-  function shadow(e){
-      if(e.target.id == "TOP"){
-        calculateXoffset(e.pageX - e.target.offsetWidth / 2);
-        calculateYoffset(e.pageY - e.target.offsetHeight / 2);
-      }
-      else{
-        calculateXoffset(e.pageX - e.target.offsetWidth / 2 - e.target.offsetLeft);
-        calculateYoffset(e.pageY - e.target.offsetHeight / 2 - e.target.offsetTop);
-      }
+  function shadow(e) {
+    if (e.target.id == "TOP") {
+      calculateXoffset(e.pageX - e.target.offsetWidth / 2);
+      calculateYoffset(e.pageY - e.target.offsetHeight / 2);
+    } else {
+      calculateXoffset(
+        e.pageX - e.target.offsetWidth / 2 - e.target.offsetLeft
+      );
+      calculateYoffset(
+        e.pageY - e.target.offsetHeight / 2 - e.target.offsetTop
+      );
+    }
   }
-  function calculateXoffset(offset){
-    setXoffset((offset) / 2);
+  function calculateXoffset(offset) {
+    setXoffset(offset / 2);
   }
-  function calculateYoffset(offset){
-    setYoffset((offset) / 2);
+  function calculateYoffset(offset) {
+    setYoffset(offset / 2);
   }
-  
+
   return (
     <>
       <TopBar></TopBar>

@@ -46,7 +46,7 @@ export default function Projects() {
         <Br></Br>
         <ProjBox title="DK Birthday Event" subtitle="2022.01 ~ 2022.02">
           <MyText fontType={FontType.LIGHT} color={Colors.WHITE} fontSize={18} isPretendard={1}>
-            - 도겸의 생일을 기념해 간단한 문제를 풀고, 결과를 SNS에 공유할 수 있는 웹사이트
+            - 도겸의 생일을 기념해 제작한 이벤트로, 문제를 풀고 결과를 SNS에 공유할 수 있는 웹사이트
           </MyText>
           <MyText fontType={FontType.LIGHT} color={Colors.WHITE} fontSize={18} isPretendard={1}>
             - 이용자 1000명 이상, 커스텀 도메인을 사용해 배포(기간 한정)

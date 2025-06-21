@@ -1,15 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import Main from './components/screens/Main';
-import NotFound from './components/screens/NotFound';
-import Sample from './components/works/Sample';
+import React from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Main from "./components/screens/Main";
+import NotFound from "./components/screens/NotFound";
+import Sample from "./components/works/Sample";
+import Compact from "./components/screens/Compact";
 
 const router = createBrowserRouter([
   {
-    path: '/',
+    path: "/",
     element: <Main />,
+  },
+  {
+    path: "/games",
+    element: <Compact />,
   },
   // {
   //   path: '/map',
@@ -27,13 +32,12 @@ const router = createBrowserRouter([
   //   path: '/upload',
   //   element: <Upload />,
   // },
-  // 404
   {
-    path: '/test',
-    element: <Sample />
+    path: "/test",
+    element: <Sample />,
   },
   {
-    path: '*',
+    path: "*",
     element: <NotFound />,
   },
 ]);
